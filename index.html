@@ -14,30 +14,59 @@
     body {
       font-family: 'Cinzel', serif, Arial, sans-serif;
       background:
-        linear-gradient(rgba(180,0,0,0.6), rgba(90,0,0,0.9)),
         url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2g6iQVDXNjAb00kHYnvIcXvRTTkpZmu51BTJS1osnQHgpjKkbF2wPfSw&s=10') no-repeat center center fixed;
       background-size: cover;
       color: #f0e6e6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      position: relative;
+      z-index: 0;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: -1;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      /* Neon red glow effect by overlaying a subtle pulsating blurred radial gradient */
+      background:
+        radial-gradient(circle at center, rgba(255, 0, 0, 0.15), transparent 70%);
+      filter: blur(40px);
+      animation: pulseNeon 4s ease-in-out infinite;
+      mix-blend-mode: screen;
+      opacity: 0.6;
+    }
+    @keyframes pulseNeon {
+      0%,100% { opacity: 0.6; }
+      50% { opacity: 0.8; }
     }
     header {
-      background: #4a0b0bcc;
+      background: rgba(74, 11, 11, 0.7);
       padding: 1.5rem 2rem;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(200, 0, 0, 0.8);
+      box-shadow: 0 4px 8px rgba(255, 0, 0, 0.8);
       position: relative;
       z-index: 2;
     }
     header h1 {
       font-size: 3rem;
       font-weight: 700;
-      color: #d62e2e;
+      color: #ff3333;
       text-shadow:
-         2px 2px 5px #690000,
-         0 0 8px #eb3030,
-         0 0 15px #a80404;
+         0 0 6px #ff0000,
+         0 0 15px #ff4444,
+         0 0 25px #ff4444,
+         0 0 40px #ff6666;
       letter-spacing: 5px;
     }
     main {
@@ -52,13 +81,13 @@
       z-index: 2;
     }
     section.card {
-      background: #1b0000cc;
-      border: 2px solid #d62e2e;
+      background: rgba(27, 0, 0, 0.8);
+      border: 2px solid #ff3333;
       border-radius: 15px;
       padding: 1.8rem 2rem;
       box-shadow:
-        inset 0 0 10px #8a0000,
-        0 5px 15px #490000cc;
+        inset 0 0 10px #ff3333dd,
+        0 5px 15px #ff0000cc;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -70,51 +99,51 @@
     section.card:hover {
       transform: translateY(-10px);
       box-shadow:
-        inset 0 0 20px #d62e2e,
-        0 10px 30px #b10303;
-      background: #280000ee;
+        inset 0 0 25px #ff6666ee,
+        0 10px 35px #ff5555dd;
+      background: rgba(40, 0, 0, 0.9);
     }
     section.card h2 {
-      color: #f54242;
+      color: #ff4444;
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      text-shadow: 1px 1px 4px #5a0b0b;
+      text-shadow: 0 0 6px #ff4444;
     }
     section.card p {
       flex-grow: 1;
       font-size: 1rem;
       line-height: 1.4;
-      color: #f3dfdfcc;
+      color: #fbeaeacc;
       margin-bottom: 1.5rem;
       font-style: normal;
       font-family: Arial, Helvetica, sans-serif;
     }
     section.card a {
       align-self: flex-start;
-      background-color: #d62e2e;
+      background-color: #ff2222;
       color: #fff;
       text-decoration: none;
       padding: 0.5rem 1.3rem;
       font-weight: 700;
       border-radius: 12px;
-      box-shadow: 0 0 7px #7a0000;
+      box-shadow: 0 0 10px #ff4444;
       transition: background-color 0.3s ease;
     }
     section.card a:hover,
     section.card a:focus {
-      background-color: #a01313;
-      box-shadow: 0 0 12px #ff3333;
+      background-color: #cc1a1a;
+      box-shadow: 0 0 18px #ff6666;
       outline: none;
     }
     footer {
-      background: #4a0b0bcc;
+      background: rgba(74, 11, 11, 0.7);
       padding: 1rem 1rem;
       text-align: center;
       font-size: 0.9rem;
-      color: #ddbbbbdd;
+      color: #ffbbbbcc;
       font-style: normal;
       letter-spacing: 0.05em;
-      text-shadow: 1px 1px 4px #230000;
+      text-shadow: 1px 1px 4px #660000;
       position: relative;
       z-index: 2;
     }
