@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guia da Shinobi Legacy - RPG</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Cinzel', serif, Arial, sans-serif;
+      background:
+        linear-gradient(rgba(180,0,0,0.6), rgba(90,0,0,0.9)),
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOGCBlBDIbjOegNW31I0px4hWx0Lq-Vb4d_-e0ThODyWxpactHd6pNRBqW&s=10') no-repeat center center fixed;
+      background-size: cover;
+      color: #f0e6e6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #4a0b0bcc;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(200, 0, 0, 0.8);
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #d62e2e;
+      text-shadow:
+         2px 2px 5px #690000,
+         0 0 8px #eb3030,
+         0 0 15px #a80404;
+      letter-spacing: 5px;
+    }
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    section.card {
+      background: #1b0000cc;
+      border: 2px solid #d62e2e;
+      border-radius: 15px;
+      padding: 1.8rem 2rem;
+      box-shadow:
+        inset 0 0 10px #8a0000,
+        0 5px 15px #490000cc;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+    }
+    section.card:hover {
+      transform: translateY(-10px);
+      box-shadow:
+        inset 0 0 20px #d62e2e,
+        0 10px 30px #b10303;
+      background: #280000ee;
+    }
+    section.card h2 {
+      color: #f54242;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 4px #5a0b0b;
+    }
+    section.card p {
+      flex-grow: 1;
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #f3dfdfcc;
+      margin-bottom: 1.5rem;
+      font-style: normal;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    section.card a {
+      align-self: flex-start;
+      background-color: #d62e2e;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1.3rem;
+      font-weight: 700;
+      border-radius: 12px;
+      box-shadow: 0 0 7px #7a0000;
+      transition: background-color 0.3s ease;
+    }
+    section.card a:hover,
+    section.card a:focus {
+      background-color: #a01313;
+      box-shadow: 0 0 12px #ff3333;
+      outline: none;
+    }
+    footer {
+      background: #4a0b0bcc;
+      padding: 1rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ddbbbbdd;
+      font-style: normal;
+      letter-spacing: 0.05em;
+      text-shadow: 1px 1px 4px #230000;
+      position: relative;
+      z-index: 2;
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+      }
+      main {
+        grid-template-columns: 1fr;
+        margin: 2rem 1rem;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Bem vindo ao guia da Shinobi Legacy</h1>
+  </header>
+  <main>
+    <section class="card" tabindex="0" role="link" aria-label="Sistemas Essenciais: clique para saber mais">
+      <h2>Sistemas Essenciais</h2>
+      <p>Sistemas necessários para o entendimento inicial do RPG, necessários para que possa começar a jogar.</p>
+      <a href="http://aminoapps.com/p/38f9amk" target="_blank" rel="noopener noreferrer">Saiba mais</a>
+    </section>
+    <section class="card" tabindex="0" role="link" aria-label="Sistemas Especiais: clique para saber mais">
+      <h2>Sistemas Especiais</h2>
+      <p>Sistemas não necessários, mas que abrangem seu entendimento e permitem acrescentar mais possibilidades de crescimento ao seu personagem.</p>
+      <a href="http://aminoapps.com/p/ncoamlq" target="_blank" rel="noopener noreferrer">Saiba mais</a>
+    </section>
+    <section class="card" tabindex="0" role="link" aria-label="Árvores: clique para saber mais">
+      <h2>Árvores</h2>
+      <p>Fundamentais para o crescimento de seu personagem em nosso mundo, que definirá quem ou pelo que ele será conhecido, seja por sua força, velocidade, ou capacidade de, por exemplo, selamento.</p>
+      <a href="http://aminoapps.com/p/a94443k" target="_blank" rel="noopener noreferrer">Saiba mais</a>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Todos os direitos reservados para a staff da Shinobi Legacy
+  </footer>
+</body>
+</html>
+
